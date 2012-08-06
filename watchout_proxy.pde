@@ -1,10 +1,9 @@
 /*
-Project       : Jaguar v2
+ Project      : Jaguar v2
  Created by   : Eddy
  Created date : 13 September 2011
  Description  : This program acts as proxy between 2 iPads and WatchOut Master
- If no iPad trigger is present, it will receive string from WatchOut and respond with respective command to slide the animation.
- If iPad trigger is present, it will read the command and relay to WatchOut and store various variables states.
+ Dependency   : ControlP5 http://www.sojamo.de/libraries/controlP5/
  */
 
 import processing.net.*;
