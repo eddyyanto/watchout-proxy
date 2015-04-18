@@ -1,9 +1,9 @@
 /*
- Project      : Jaguar v2
- Created by   : Eddy
- Created date : 13 September 2011
- Description  : This program acts as proxy between 2 iPads and WatchOut Master
- Dependency   : ControlP5 http://www.sojamo.de/libraries/controlP5/
+     Project      : Jaguar v2
+     Created by   : Eddy
+     Created date : 13 September 2011
+     Description  : Proxy utility between multiple iPads control and WatchOut System
+     Dependency   : ControlP5 http://www.sojamo.de/libraries/controlP5/
  */
 
 import processing.net.*;
@@ -314,20 +314,22 @@ void _log(String log) {
     txtLog.setText(hour() + ":" + minute() + ":" + second() + "\t" + log + "\n" + txtLog.text());
 }
 
+// updated to use third "fade rate" parameter
 void slide_right() {
-    while (slider < 1) {
-        slider = slider + 0.01; 
-        myClient.write("setInput animation_x " + slider + "\n");
-        delay(6);
-    }
+    // while (slider < 1) {
+    //     slider = slider + 0.01; 
+        myClient.write("setInput animation_x " + slider + " 500\n");
+    //     delay(6);
+    // }
 }
 
+// updated to use third "fade rate" parameter
 void slide_left() {
-    while (slider > 0) {
-        slider = slider - 0.01; 
-        myClient.write("setInput animation_x " + slider + "\n");
-        delay(6);
-    }
+    // while (slider > 0) {
+    //     slider = slider - 0.01; 
+        myClient.write("setInput animation_x " + slider + " 500\n");
+    //     delay(6);
+    // }
 }
 
 class SliderThread extends Thread {
