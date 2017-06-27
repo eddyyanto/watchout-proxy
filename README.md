@@ -1,4 +1,4 @@
-###Dataton WatchOut Proxy Utility.###
+### Dataton WatchOut Proxy Utility.
 
 This proxy utility exposes WatchOut show properties to external TCP client through socket which by default isn't available through WatchOut Control Protocol. Those properties include:
 - Auxiliary timelines status, whether it's in running mode or stopped.
